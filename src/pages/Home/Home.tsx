@@ -1,6 +1,6 @@
 import './home.css';
 
-import { Navbar } from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 
 export function Home() {
 
