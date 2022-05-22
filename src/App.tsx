@@ -7,6 +7,7 @@ import { Contact } from "./pages/Contact/Contact";
 import { MilkBox } from "./pages/Tips/TipDetails/MilkBox";
 import { Tips } from "./pages/Tips/Tips";
 import { Maps } from "./pages/Maps/Maps";
+import { Score } from "./pages/Score/Score";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/tips" exact component={Tips} />
           <Route path="/tips/milk" component={MilkBox} />
           <Route path="/maps" component={Maps} />
+          <Route path="/score" component={Score} />
         </Switch>
       </AuthContextProvider>
     </BrowserRouter>

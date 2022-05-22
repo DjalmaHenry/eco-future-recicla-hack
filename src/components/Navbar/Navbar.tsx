@@ -94,6 +94,11 @@ const ResponsiveAppBar = () => {
                   <Typography textAlign="center">Contato</Typography>
                 </MenuItem>
               </a>
+              <a href="/score">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Pontuação</Typography>
+                </MenuItem>
+              </a>
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -121,6 +126,13 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}>
                 Contato
+              </Button>
+            </a>
+            <a href="/score">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}>
+                Pontuação
               </Button>
             </a>
           </Box>
