@@ -2,6 +2,10 @@
   position: fixed;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo{
   font-family: 'monospace';
   font-weight: 700;
