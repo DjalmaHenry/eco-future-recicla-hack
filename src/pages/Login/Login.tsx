@@ -18,7 +18,7 @@ export function Login() {
   }
 
   return (
-    <div className="container">
+    <div className="container-login">
       <aside>
         {/* <img className="img-aside" alt="Ilustração simbolizando perguntas e respostas" /> */}
         <p className="p-aside">

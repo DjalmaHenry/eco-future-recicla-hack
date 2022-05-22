@@ -1,58 +1,71 @@
-.home-container{
- margin-top: 70px;
- font-family: 'Roboto', sans-serif;
- background-color: #DDD7BF;
- height: 92vh;
+.home-container {
+  font-family: "Roboto", sans-serif;
+  background-color: #ddd7bf;
+  height: 100vh;
+  width: 100%;
 }
 
-.home-elements{
- margin-right: auto;
+.home-elements {
+  margin-right: auto;
 }
 
-.top{
- background-color: #88932A;
- font-size: 2rem;
- margin-bottom: 200px;
- text-align: center;
+.top {
+  background-color: #88932a;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 200px;
+  text-align: center;
+  padding-top: 3.5rem;
 }
 
 .name {
- font-weight: bold;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
 }
 
-.mid{
- font-size: 1.5rem;
- color: #88932A;
- align-items: center;
- justify-content: center;
- margin: 0;
- display: flex;
- flex-direction: column;
- text-shadow: 1px 1px 2px #050505;
+.mid {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #88932a;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.app-name{
- font-weight: bold;
+.app-name {
+  font-weight: bold;
 }
 
-.mid-buttons{
- display: block;
+.mid-buttons {
+  display: block;
 }
 
-.button{
- color: black;
- text-align: center;
- text-decoration: none;
- border-style: solid;
- border-color: rgb(255, 255, 255);
- border-radius: 10px;
- padding: 10px;
- font-size: 20px;
- margin: 0 0 10px 0;
- width: 100%;
+.button span {
+    margin: 0 5px;
+}
+
+.button {
+  color: #88932a;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  width: 100%;
 }
 
 .button:hover {
- cursor: pointer;
- background-color: #88932A;
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+@media only screen and (max-width: 899px) {
+  .top {
+    padding-top: 2.5rem;
+  }
 }

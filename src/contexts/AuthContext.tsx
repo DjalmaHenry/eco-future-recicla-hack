@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { auth, firebase } from "../services/firebase";
+import { auth } from "../services/firebase";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 type User = {

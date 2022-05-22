@@ -13,11 +13,15 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../assets/images/LogomarcaBranca.png';
 import './navbar.css';
+import { useAuth } from '../../hooks/useAuth';
+import { useHistory } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Perfil', 'Sair'];
+const pages = ['Início', 'Dicas', 'Coleta', 'Contato'];
+const settings = ['Sair'];
 
 const ResponsiveAppBar = () => {
+  const history = useHistory();
+  const { user, signInWithGoogle } = useAuth();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -37,7 +41,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar className="app-bar" sx={{background:'green'}}>
+    <AppBar className="app-bar" sx={{background:'#88932a'}}>
       <Container maxWidth="xl" className="container">
         <Toolbar disableGutters>
           <img src={Logo} alt="Logomarca" className="logo"/>
@@ -90,7 +94,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="user" src={user?.avatar} />
               </IconButton>
             </Tooltip>
             <Menu
