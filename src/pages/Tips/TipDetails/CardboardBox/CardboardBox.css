@@ -1,0 +1,61 @@
+.tip-container {
+  height: 100vh;
+  background-color: #88932a;
+}
+.item-container {
+  padding-top: 6rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.item-elements {
+  background-color: #f7f7f7;
+  border-radius: 1%;
+  padding: 15px;
+}
+
+.top-item {
+  background-color: #88932a;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.back-button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back {
+  color: white;
+  font-weight: bold;
+}
+
+.mid {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #ddd7bf;
+}
+
+.description {
+  display: flex;
+  text-align: left;
+}
+
+.photo-cardboard {
+  width: 300px;
+}

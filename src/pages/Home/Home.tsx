@@ -27,16 +27,18 @@ export function Home() {
               <p>
                 Bem vindo ao
                 <br />
-                <span className="app-name">Eco Future</span>, seu
+                Eco Future, seu
                 <br />
                 app de reciclagem!
               </p>
             </div>
             <div className="mid-buttons">
-              <div className="button">
-                <MdRecycling />
-                <span>Dicas de reciclagem</span>
-              </div>
+              <a href="/tips">
+                <div className="button">
+                  <MdRecycling />
+                  <span>Itens de reciclagem</span>
+                </div>
+              </a>
               <div className="button">
                 <MdOutlineMap />
                 <span>Locais de coleta</span>
