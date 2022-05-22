@@ -37,10 +37,12 @@ export function Home() {
                 <MdRecycling />
                 <span>Dicas de reciclagem</span>
               </div>
-              <div className="button">
-                <MdOutlineMap />
-                <span>Locais de coleta</span>
-              </div>
+              <a href="/maps">
+                <div className="button">
+                  <MdOutlineMap />
+                  <span>Locais de coleta</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
