@@ -87,9 +87,11 @@ const ResponsiveAppBar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Coleta</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Contato</Typography>
-              </MenuItem>
+              <a href="/contact">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Contato</Typography>
+                </MenuItem>
+              </a>
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -110,11 +112,13 @@ const ResponsiveAppBar = () => {
               sx={{ my: 2, color: "white", display: "block" }}>
               Coleta
             </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}>
-              Contato
-            </Button>
+            <a href="/contact">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}>
+                Contato
+              </Button>
+            </a>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

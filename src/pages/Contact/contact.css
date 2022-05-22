@@ -1,0 +1,15 @@
+.container-contact {
+    background-color: #ddd7bf;
+    height: 100vh;
+    width: 100%;
+}
+
+.top.form {
+    padding-top: 5rem;
+}
+
+.card {
+    max-width: 600px;
+    margin: -8rem auto;
+    
+}
