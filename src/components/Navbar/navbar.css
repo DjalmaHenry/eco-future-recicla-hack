@@ -1,5 +1,5 @@
 .app-bar{
-  position: static;
+  position: fixed;
 }
 
 .logo{

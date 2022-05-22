@@ -1,0 +1,58 @@
+.home-container{
+ margin-top: 70px;
+ font-family: 'Roboto', sans-serif;
+ background-color: #DDD7BF;
+ height: 92vh;
+}
+
+.home-elements{
+ margin-right: auto;
+}
+
+.top{
+ background-color: #88932A;
+ font-size: 2rem;
+ margin-bottom: 200px;
+ text-align: center;
+}
+
+.name {
+ font-weight: bold;
+}
+
+.mid{
+ font-size: 1.5rem;
+ color: #88932A;
+ align-items: center;
+ justify-content: center;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+ text-shadow: 1px 1px 2px #050505;
+}
+
+.app-name{
+ font-weight: bold;
+}
+
+.mid-buttons{
+ display: block;
+}
+
+.button{
+ color: black;
+ text-align: center;
+ text-decoration: none;
+ border-style: solid;
+ border-color: rgb(255, 255, 255);
+ border-radius: 10px;
+ padding: 10px;
+ font-size: 20px;
+ margin: 0 0 10px 0;
+ width: 100%;
+}
+
+.button:hover {
+ cursor: pointer;
+ background-color: #88932A;
+}
