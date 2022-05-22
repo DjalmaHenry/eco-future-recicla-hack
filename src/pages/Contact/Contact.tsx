@@ -41,6 +41,10 @@ export function Contact() {
                     </Grid>
 
                     <Grid xs={12} item>
+                         <TextField   type="text" name="subject" label="Assunto" placeholder="Digite o assunto" variant="outlined" fullWidth required/>
+                    </Grid>
+
+                    <Grid xs={12} item>
                         <TextField   type="message" name="message"  label="Mensagem" multiline rows={4} placeholder="Digite sua mensagem" variant="outlined" fullWidth required/>
                     </Grid>
 
