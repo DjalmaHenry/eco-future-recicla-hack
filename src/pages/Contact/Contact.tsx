@@ -1,26 +1,22 @@
 import "./contact.css";
-import { Button, Card, CardContent, FormGroup, Grid, TextField, Typography } from "@mui/material";
-import { FormControlLabel } from "@mui/material";
-import { Checkbox } from "@mui/material";
+import { Button, Card, CardContent, Grid, TextField, Typography } from "@mui/material";
 import { Navbar } from "../../components/Navbar/Navbar";
-import React, { useState } from "react";
+import React, {useRef} from "react";
+import { AnyRecord } from "dns";
+import emailjs from "emailjs-com";
 
 export function Contact() {
     
-    let [campos, setCampos] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: ""
-    });
+    async function sendEmail(e: any) {
+        e.preventDefault();
 
-    function handleInputChange(event: any) {
-        // campos[event.target.name] = event.target.value;
-        setCampos(campos);
-        console.log(campos);
-        console.log(event.target.value);
-       
-        
+        emailjs.sendForm('gmailMessage', 'template_kgictxc', e.target, 'mRfbfVdwZLhJUl6Ty')
+      .then((result: any) => {
+          alert('Sua mensagem foi enviada!');
+      }, (error: any) => {
+          alert(error.message);
+      });
+      e.target.reset();
     }
 
   return (
@@ -30,24 +26,22 @@ export function Contact() {
      <Card style={{maxWidth:600, margin:"0 auto", padding:"15px 5px"}}>
          <CardContent>
              <Typography gutterBottom variant="h5" align="center"> Entre em contato conosco </Typography>
-             <form>
+             <form onSubmit={sendEmail}>
                 <Grid container spacing={1} > 
                     <Grid xs={12} sm={6} item>
-                        <TextField onChange={handleInputChange} type="text" name="firstName" label="Primeiro Nome" placeholder="Digite seu primeiro Nome" variant="outlined" fullWidth required/>
-
-                        {/* <p>{firstName}</p> */}
+                        <TextField  type="text" name="firstName" label="Primeiro Nome" placeholder="Digite seu primeiro Nome" variant="outlined" fullWidth required/>
                      </Grid>
 
                      <Grid xs={12} sm={6} item>
-                         <TextField onChange={handleInputChange} type="text" name="lastName"  label="Ultimo Nome" placeholder="Digite seu ultimo Nome" variant="outlined" fullWidth required/>
+                         <TextField  type="text" name="lastName"  label="Ultimo Nome" placeholder="Digite seu ultimo Nome" variant="outlined" fullWidth required/>
                     </Grid>
 
                     <Grid xs={12} item>
-                         <TextField  onChange={handleInputChange} type="text" name="email" label="E-mail" placeholder="Digite seu E-mail" variant="outlined" fullWidth required/>
+                         <TextField   type="text" name="email" label="E-mail" placeholder="Digite seu E-mail" variant="outlined" fullWidth required/>
                     </Grid>
 
                     <Grid xs={12} item>
-                        <TextField  onChange={handleInputChange} type="message" name="message"  label="Mensagem" multiline rows={4} placeholder="Digite sua mensagem" variant="outlined" fullWidth required/>
+                        <TextField   type="message" name="message"  label="Mensagem" multiline rows={4} placeholder="Digite sua mensagem" variant="outlined" fullWidth required/>
                     </Grid>
 
                     <Grid xs={12} item>
