@@ -71,4 +71,8 @@
   .top {
     padding-top: 2.5rem;
   }
+
+  .mid {
+    padding-top: 0;
+  }
 }
