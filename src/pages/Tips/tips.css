@@ -1,9 +1,8 @@
 .tips-container {
   font-family: "Roboto", sans-serif;
   background-color: #ddd7bf;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  padding-bottom: 14%;
 }
 
 .top {
@@ -88,4 +87,10 @@
 
 .title {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 899px) {
+  .tips-container {
+    height: 100%;
+  }
 }

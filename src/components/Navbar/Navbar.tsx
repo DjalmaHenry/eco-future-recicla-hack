@@ -96,17 +96,14 @@ const ResponsiveAppBar = () => {
                   <Typography textAlign="center">Itens recicláves</Typography>
                 </MenuItem>
               </a>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Coleta</Typography>
-              </MenuItem>
-              <a href="/contact">
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Contato</Typography>
-                </MenuItem>
-              </a>
               <a href="/maps">
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Coleta</Typography>
+                </MenuItem>
+              </a>
+              <a href="/contact">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Contato</Typography>
                 </MenuItem>
               </a>
               <a href="/score">
@@ -133,26 +130,20 @@ const ResponsiveAppBar = () => {
                 Itens recicláves
               </Button>
             </a>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
-            >
-              Coleta
-            </Button>
-            <a href="/contact">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                Contato
-              </Button>
-            </a>
             <a href="/maps">
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Coleta
+              </Button>
+            </a>
+            <a href="/contact">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Contato
               </Button>
             </a>
             <a href="/score">
