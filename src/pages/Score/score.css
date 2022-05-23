@@ -1,11 +1,11 @@
 .manutencao{
- margin-top: 4rem;
- width: 50%;
+ margin-top: 6rem;
+ width: 40%;
 }
 
 .score-text{
  font-weight: bold;
- font-size: 3rem;
+ font-size: 2rem;
  text-shadow: 1px 1px 1px #050505;
 }
 
@@ -22,6 +22,6 @@
  }
 
  .score-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
  }
 }
