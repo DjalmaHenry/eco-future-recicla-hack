@@ -19,7 +19,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 const ResponsiveAppBar = () => {
   const history = useHistory();
-  const { user, signInWithGoogle } = useAuth();
+  const { user } = useAuth();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );

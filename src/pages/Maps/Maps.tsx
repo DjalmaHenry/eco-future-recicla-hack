@@ -12,7 +12,6 @@ import Goias from "../../assets/images/estados/Goias.png";
 import Maranhao from "../../assets/images/estados/Maranhao.png";
 import MatoGrossodoSul from "../../assets/images/estados/MatoGrossodoSul.png";
 import MatoGrosso from "../../assets/images/estados/MatoGrosso.png";
-import Para from "../../assets/images/estados/Para.png";
 import Paraiba from "../../assets/images/estados/Paraiba.png";
 import Parana from "../../assets/images/estados/Parana.png";
 import Pernambuco from "../../assets/images/estados/Pernambuco.png";

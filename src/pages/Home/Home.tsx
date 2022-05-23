@@ -1,12 +1,10 @@
 import "./home.css";
 import { MdRecycling, MdOutlineMap } from "react-icons/md";
 import Navbar from "../../components/Navbar/Navbar";
-import { useHistory } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
 export function Home() {
-  const history = useHistory();
-  const { user, signInWithGoogle } = useAuth();
+  const { user } = useAuth();
 
   return (
     <div className="container">
