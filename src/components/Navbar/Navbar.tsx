@@ -15,8 +15,7 @@ import Logo from "../../assets/images/LogomarcaBranca.png";
 import "./navbar.css";
 import { useAuth } from "../../hooks/useAuth";
 import { useHistory } from "react-router-dom";
-
-const settings = ["Sair"];
+import { getAuth, signOut } from "firebase/auth";
 
 const ResponsiveAppBar = () => {
   const history = useHistory();
@@ -41,6 +40,17 @@ const ResponsiveAppBar = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const handleSignOut = () => {
+    const auth = getAuth();
+    signOut(auth).then(() => {
+        history.push("/");
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -94,33 +104,63 @@ const ResponsiveAppBar = () => {
                   <Typography textAlign="center">Contato</Typography>
                 </MenuItem>
               </a>
+              <a href="/maps">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Coleta</Typography>
+                </MenuItem>
+              </a>
+              <a href="/score">
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Pontuação</Typography>
+                </MenuItem>
+              </a>
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <a href="/home">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}>
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
                 Início
               </Button>
             </a>
             <a href="/tips">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}>
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
                 Itens recicláves
               </Button>
             </a>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}>
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
               Coleta
             </Button>
             <a href="/contact">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}>
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
                 Contato
+              </Button>
+            </a>
+            <a href="/maps">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Coleta
+              </Button>
+            </a>
+            <a href="/score">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Pontuação
               </Button>
             </a>
           </Box>
@@ -146,11 +186,11 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography onClick={handleSignOut} textAlign="center">
+                  Sair
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

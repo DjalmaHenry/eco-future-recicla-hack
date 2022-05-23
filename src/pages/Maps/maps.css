@@ -1,0 +1,29 @@
+.top-map{
+ margin-bottom: 1px;
+ background-color: #88932a;
+ font-size: 1.5rem;
+ color: white;
+ text-align: center;
+ padding-top: 3.5rem;
+ padding-bottom: 1px;
+}
+
+.maps-container{
+ background-color: #ddd7bf;
+}
+
+.name-map{
+ text-align: center;
+ color: #88932a;
+}
+
+.photo{
+ display: flex;
+ justify-content: center;
+}
+
+.map-photo{
+ width: 70%;
+ border-radius: 5%;
+ margin-bottom: 50px;
+}

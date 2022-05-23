@@ -1,0 +1,27 @@
+.manutencao{
+ margin-top: 4rem;
+ width: 50%;
+}
+
+.score-text{
+ font-weight: bold;
+ font-size: 3rem;
+ text-shadow: 1px 1px 1px #050505;
+}
+
+.score{
+ display: block;
+ text-align: center;
+ color: #88932a;
+}
+
+@media only screen and (max-width: 899px) {
+ .manutencao{
+  margin-top: 6rem;
+  width: 100%;
+ }
+
+ .score-text {
+  font-size: 2rem;
+ }
+}

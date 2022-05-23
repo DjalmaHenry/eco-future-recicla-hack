@@ -10,6 +10,8 @@ import { CardboardBox } from "./pages/Tips/TipDetails/CardboardBox/CardboardBox"
 import { FlorescentBulb } from "./pages/Tips/TipDetails/FlorescentBulb/FlorescentBulb";
 import { MetalPackaging } from "./pages/Tips/TipDetails/MetalPackaging/MetalPackaging";
 import { PetBottle } from "./pages/Tips/TipDetails/PetBottle/PetBottle";
+import { Maps } from "./pages/Maps/Maps";
+import { Score } from "./pages/Score/Score";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/tips/bulb" component={FlorescentBulb} />
           <Route path="/tips/metal" component={MetalPackaging} />
           <Route path="/tips/pet" component={PetBottle} />
+          <Route path="/maps" component={Maps} />
+          <Route path="/score" component={Score} />
         </Switch>
       </AuthContextProvider>
     </BrowserRouter>
